@@ -1,0 +1,18 @@
+[project]
+name = "comfyui-secadnet"
+description = "SECAD-Net: Sketch-Extrude CAD Reconstruction - Originally from ComfyUI-CADabra"
+version = "1.0.0"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+]
+
+[project.urls]
+Repository = "https://github.com/PozzettiAndrea/ComfyUI-SECADNET"
+"Original Project" = "https://github.com/PozzettiAndrea/ComfyUI-CADabra"
+
+[tool.comfy]
+PublisherId = "pznodes"
+DisplayName = "SECAD-Net"
+Icon = ""
