@@ -1,0 +1,314 @@
+{
+  "id": "38e5f4a4-52d5-4743-bb07-32867eb82d59",
+  "revision": 0,
+  "last_node_id": 6,
+  "last_link_id": 6,
+  "nodes": [
+    {
+      "id": 4,
+      "type": "MeshToVoxel",
+      "pos": [
+        560.20703125,
+        524.44140625
+      ],
+      "size": [
+        270,
+        122
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mesh",
+          "type": "TRIMESH",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "voxels",
+          "type": "VOXEL_GRID",
+          "links": [
+            3
+          ]
+        },
+        {
+          "name": "voxel_mesh",
+          "type": "TRIMESH",
+          "links": [
+            5
+          ]
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-cadabra",
+        "ver": "f0efa9678de03ac217a79917a61f99dcc4749aab",
+        "Node name for S&R": "MeshToVoxel"
+      },
+      "widgets_values": [
+        64,
+        true
+      ]
+    },
+    {
+      "id": 5,
+      "type": "GeomPackPreviewMeshVTK",
+      "pos": [
+        954.69140625,
+        491.4140625
+      ],
+      "size": [
+        512,
+        702
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "trimesh",
+          "type": "TRIMESH",
+          "link": 5
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfyui-geometrypack",
+        "ver": "53d17f3e55e406f7cab8805cd64084af27ba313f",
+        "Node name for S&R": "GeomPackPreviewMeshVTK"
+      },
+      "widgets_values": [
+        "fields",
+        ""
+      ]
+    },
+    {
+      "id": 2,
+      "type": "SECADNetInference",
+      "pos": [
+        777.00390625,
+        307.94921875
+      ],
+      "size": [
+        270,
+        122
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "SECADNET_MODEL",
+          "link": 1
+        },
+        {
+          "name": "voxels",
+          "type": "VOXEL_GRID",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mesh",
+          "type": "TRIMESH",
+          "links": [
+            6
+          ]
+        },
+        {
+          "name": "latent_code",
+          "type": "SECADNET_LATENT",
+          "links": null
+        },
+        {
+          "name": "status",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-cadabra",
+        "ver": "f0efa9678de03ac217a79917a61f99dcc4749aab",
+        "Node name for S&R": "SECADNetInference"
+      },
+      "widgets_values": [
+        128,
+        0.5
+      ]
+    },
+    {
+      "id": 6,
+      "type": "GeomPackPreviewMesh",
+      "pos": [
+        1505.27734375,
+        284.27734375
+      ],
+      "size": [
+        512,
+        542
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "trimesh",
+          "type": "TRIMESH",
+          "link": 6
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfyui-geometrypack",
+        "ver": "53d17f3e55e406f7cab8805cd64084af27ba313f",
+        "Node name for S&R": "GeomPackPreviewMesh"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 3,
+      "type": "GeomPackLoadMesh",
+      "pos": [
+        251.546875,
+        569.48828125
+      ],
+      "size": [
+        270,
+        78
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "mesh",
+          "type": "TRIMESH",
+          "links": [
+            2
+          ]
+        },
+        {
+          "name": "texture",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-geometrypack",
+        "ver": "53d17f3e55e406f7cab8805cd64084af27ba313f",
+        "Node name for S&R": "GeomPackLoadMesh"
+      },
+      "widgets_values": [
+        "3d/simple_cylinder.stl"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "LoadSECADNetModel",
+      "pos": [
+        394.80078125,
+        258.640625
+      ],
+      "size": [
+        270,
+        174
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "SECADNET_MODEL",
+          "links": [
+            1
+          ]
+        },
+        {
+          "name": "model_info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-cadabra",
+        "ver": "f0efa9678de03ac217a79917a61f99dcc4749aab",
+        "Node name for S&R": "LoadSECADNetModel"
+      },
+      "widgets_values": [
+        "ABC Dataset (recommended)",
+        "cuda",
+        1,
+        true,
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "SECADNET_MODEL"
+    ],
+    [
+      2,
+      3,
+      0,
+      4,
+      0,
+      "TRIMESH"
+    ],
+    [
+      3,
+      4,
+      0,
+      2,
+      1,
+      "VOXEL_GRID"
+    ],
+    [
+      5,
+      4,
+      1,
+      5,
+      0,
+      "TRIMESH"
+    ],
+    [
+      6,
+      2,
+      0,
+      6,
+      0,
+      "TRIMESH"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        -492.890625,
+        -160.2421875
+      ]
+    },
+    "workflowRendererVersion": "LG",
+    "frontendVersion": "1.33.10"
+  },
+  "version": 0.4
+}
