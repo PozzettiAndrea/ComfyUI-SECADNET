@@ -1,6 +1,6 @@
 [project]
 name = "comfyui-secadnet"
-description = "SECAD-Net: Sketch-Extrude CAD Reconstruction - Originally from ComfyUI-CADabra"
+description = "THIS NODE IS WIP. SECAD-Net: Sketch-Extrude CAD Reconstruction - Originally from ComfyUI-CADabra"
 version = "1.0.0"
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
