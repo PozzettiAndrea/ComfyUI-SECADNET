@@ -1,3 +1,7 @@
+----------
+Work in Progress! This node is not finished.
+----------
+
 # ComfyUI-SECADNET
 
 Sketch-extrude CAD reconstruction from voxel representations.
@@ -37,6 +41,12 @@ pip install -r ComfyUI-SECADNET/requirements.txt
 - trimesh>=3.20.0
 - PyMCubes>=0.1.4
 - gdown>=4.7.0
+
+## Community
+
+Questions or feature requests? Open a [Discussion](https://github.com/PozzettiAndrea/ComfyUI-SECADNET/discussions) on GitHub.
+
+Join the [Comfy3D Discord](https://discord.gg/PN743tE5) for help, updates, and chat about 3D workflows in ComfyUI.
 
 ## Credits
 
