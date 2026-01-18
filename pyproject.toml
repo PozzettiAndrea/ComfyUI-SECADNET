@@ -7,10 +7,18 @@ requires-python = ">=3.10"
 classifiers = [
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
 ]
+dynamic = ["dependencies"]
 
 [project.urls]
 Repository = "https://github.com/PozzettiAndrea/ComfyUI-SECADNET"
 "Original Project" = "https://github.com/PozzettiAndrea/ComfyUI-CADabra"
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
 
 [tool.comfy]
 PublisherId = "pznodes"
